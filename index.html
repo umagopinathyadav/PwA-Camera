@@ -35,6 +35,7 @@
         let mode = "user"
         switchBtn.addEventListener("click", () => {
             mode = "environment"
+            openCamera()
         })
 
 
@@ -42,6 +43,29 @@
             console.log("start button clicked")
 
             //handleCamera Start
+
+
+        })
+        captureBtn.addEventListener("click", () => {
+            console.log("capture button clicked")
+
+        })
+        closeBtn.addEventListener("click", () => {
+            console.log("close button clicked")
+
+            console.log(player.srcObject.getVideoTracks())
+            const tracks = player.srcObject.getVideoTracks()
+            for (let i = 0; i < tracks.length; i++) {
+                tracks[i].stop()
+            }
+
+
+            captureBtn.classList.add("d-none")
+            closeBtn.classList.add("d-none")
+            startBtn.classList.remove("d-none")
+            player.classList.add("d-none")
+        })
+        const openCamera = async () => {
             if (navigator.mediaDevices) {
                 document.getElementById("loader").innerHTML = `opening Camera <div class="spinner-border text-dark"></div>`
                 startBtn.setAttribute("disabled", true)
@@ -69,27 +93,7 @@
             captureBtn.classList.remove("d-none")
             closeBtn.classList.remove("d-none")
             player.classList.remove("d-none")
-
-        })
-        captureBtn.addEventListener("click", () => {
-            console.log("capture button clicked")
-
-        })
-        closeBtn.addEventListener("click", () => {
-            console.log("close button clicked")
-
-            console.log(player.srcObject.getVideoTracks())
-            const tracks = player.srcObject.getVideoTracks()
-            for (let i = 0; i < tracks.length; i++) {
-                tracks[i].stop()
-            }
-
-
-            captureBtn.classList.add("d-none")
-            closeBtn.classList.add("d-none")
-            startBtn.classList.remove("d-none")
-            player.classList.add("d-none")
-        })
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

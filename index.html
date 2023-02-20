@@ -22,11 +22,21 @@
         <video src="" height="200" id="player" class="d-none" autoplay controls></video>
     </div>
 
+    <div id="switchCamera" class="position-absolute" style="top:50px;right:50px">
+        <button type="button" class="btn btn-outline-primary btn-lg"><i class="bi bi-camera2"></i></button>
+    </div>
+
     <script>
         const startBtn = document.getElementById("start")
         const captureBtn = document.getElementById("capture")
         const closeBtn = document.getElementById("close")
         const player = document.getElementById("player")
+        constswitchBtn = document.getElementById("switchCamera")
+        let mode = "user"
+        switchBtn.addEventListener("click", () => {
+            mode = "environment"
+        })
+
 
         startBtn.addEventListener("click", async () => {
             console.log("start button clicked")
@@ -35,15 +45,18 @@
             if (navigator.mediaDevices) {
                 document.getElementById("loader").innerHTML = `opening Camera <div class="spinner-border text-dark"></div>`
                 startBtn.setAttribute("disabled", true)
-                const x = await navigator.mediaDevices.getUserMedia({
-                    video: {
-                        facingMode: {
-                            exact: "environment"
-                        }
-                    }
+                console.log(mode);
+                try {
+                    const x = await navigator.mediaDevices.getUserMedia({
+                        video: {
+                            facingMode: mode
+                        },
 
-                })
-                player.srcObject = x
+                    })
+                    player.srcObject = x
+                } catch (error) {
+                    console.log(error)
+                }
                 document.getElementById("loader").innerHTML = ""
                 startBtn.removeAttribute("disabled")
 

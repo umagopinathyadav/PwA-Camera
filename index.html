@@ -36,11 +36,12 @@
                 document.getElementById("loader").innerHTML = `opening Camera <div class="spinner-border text-dark"></div>`
                 startBtn.setAttribute("disabled", true)
                 const x = await navigator.mediaDevices.getUserMedia({
-                    video: true,
-                    // facingmode:"user" //front camera
-                    facingMode: {
-                        exact: "environment"
-                    } //back camera
+                    video: {
+                        facingMode: {
+                            exact: "environment"
+                        }
+                    }
+
                 })
                 player.srcObject = x
                 document.getElementById("loader").innerHTML = ""

@@ -1,29 +1,25 @@
 
-#Camera-pwa
+# PWA camera
 
+A Progressive Web App (PWA) is a web application that uses modern web technologies and design principles to deliver a native app-like experience to users. It combines the features of a website with the advantages of a mobile application, such as speed, offline capability, push notifications, and more. A PWA is designed to be reliable, fast, and engaging, regardless of the user’s connection speed or device capabilities. It can be installed directly from a web browser, and provides users with a secure, fast, and reliable way to access the information they need.
 
-
+Open Camera is a progressive web application that helps users take photos with ease. It allows users to open the camera on their device, switch between front and rear cameras, and take pictures with a single tap. The app also provides users with an array of photo editing tools, allowing them to customize their photos before saving. Open Camera is an intuitive and easy-to-use app that makes taking photos a breeze.
 ## 
 
 [@uma yadav](https://umagopinathyadav.github.io/PwA-Camera)
 
 
-## Features
+## Demo
+[demo PwA camera]( https://umagopinathyadav.github.io/PwA-Camera/)
 
 
-The Camera API is a feature of the Android operating system that allows developers to access the camera hardware of a device. It can be used to capture still images, video, and audio. The Camera API provides an interface for controlling camera hardware such as setting focus, exposure, and capture parameters. It also provides access to advanced camera features such as image stabilization, white balance, and auto-focus. The Camera API is part of the Android SDK and is available for use in all Android applications.
-## 🛠 Skills
-Javascript, HTML, CSS...
+
+## Tech Stack
+
+**Client:** Html, Css, Javascript
 
 
-## 🚀 About Me
-
-My name is uma yadav and I am an experienced mobile app developer specializing in the development of camera-based applications. I have worked with various companies to develop camera apps that help people capture and share amazing moments. I am well-versed in the design and development of a variety of features, from basic camera controls to advanced features such as object recognition, facial recognition, and augmented reality. I have also developed apps that enable users to take photos and videos with special effects and share them on social media. I am a strong believer in user-centric design and strive to create intuitive, easy-to-use apps that are both functional and aesthetically pleasing.
 
 
-##  camera Used By
 
-This project is used by the following companies:
-
-Camera PWA is a progressive web app that provides an enhanced user experience when taking photos and videos on a device with a camera. It can be used to capture high-quality images and videos with various editing options. It also offers a range of features such as built-in filters, manual controls, and more. It allows users to store, access, and share their photos and videos with ease. Additionally, Camera PWA can be used to store and share photos with other users in a secure, encrypted cloud-based environment.
 

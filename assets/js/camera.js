@@ -1,5 +1,11 @@
-import { canvas, captureBtn, closeBtn, player, restartBtn, startBtn, switchBtn, mode } from "./constants.js"
+import { canvas, captureBtn, closeBtn, player, restartBtn, startBtn, switchBtn, getMode, mode } from "./constants.js"
+let mode = "user"
 
+export const changeMode = () => {
+    mode = mode === "user" ? "environment" : "user"
+
+
+}
 export const closeCamera = () => {
     const tracks = player.srcObject.getVideoTracks()
     for (let i = 0; i < tracks.length; i++) {
